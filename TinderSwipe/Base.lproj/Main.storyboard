@@ -36,6 +36,10 @@
                                         <rect key="frame" x="8" y="92" width="224" height="243"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
+                                    <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="down" translatesAutoresizingMaskIntoConstraints="NO" id="JV4-SN-pbp">
+                                        <rect key="frame" x="8" y="112" width="224" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <gestureRecognizers/>
@@ -49,6 +53,7 @@
                     <connections>
                         <outlet property="mainImageView" destination="xck-Tk-qfj" id="UNJ-qB-o1F"/>
                         <outlet property="mainView" destination="qSZ-Kt-Sjc" id="PU6-6U-2ko"/>
+                        <outlet property="thumbImageView" destination="JV4-SN-pbp" id="7RO-EU-hOZ"/>
                         <outlet property="titleLabel" destination="Inr-x2-6t2" id="Lrn-TV-O1n"/>
                     </connections>
                 </viewController>
@@ -59,10 +64,11 @@
                     </connections>
                 </panGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="244" y="116"/>
+            <point key="canvasLocation" x="244" y="115.59220389805098"/>
         </scene>
     </scenes>
     <resources>
+        <image name="down" width="286" height="300"/>
         <image name="samarth" width="200" height="200"/>
     </resources>
 </document>
