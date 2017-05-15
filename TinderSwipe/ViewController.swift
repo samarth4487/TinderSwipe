@@ -43,10 +43,22 @@ class ViewController: UIViewController {
         thumbImageView.alpha = abs(point.x) / view.center.x
         
         if sender.state == UIGestureRecognizerState.ended {
-            UIView.animate(withDuration: 0.2, animations: { 
-                card.center = self.view.center
-                self.thumbImageView.alpha = 0
-            })
+            if card.center.x < 75 {
+                UIView.animate(withDuration: 0.5, animations: { 
+                    card.center = CGPoint(x: card.center.x - 300, y: card.center.y + 100)
+                })
+                return
+            } else if card.center.x > (view.frame.width - 75) {
+                UIView.animate(withDuration: 0.5, animations: {
+                    card.center = CGPoint(x: card.center.x + 300, y: card.center.y + 100)
+                })
+                return
+            } else {
+                UIView.animate(withDuration: 0.2, animations: {
+                    card.center = self.view.center
+                    self.thumbImageView.alpha = 0
+                })
+            }
         }
     }
 }
